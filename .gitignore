@@ -1,0 +1,60 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking and linting
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+
+# Frontend dependencies
+node_modules/
+
+# Frontend build output
+dist/
+
+# Environment-specific frontend files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE settings
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+
+# Python test artifacts
+*.egg-info/
+
+# Local database and backup files
+*.sqlite3
+*.db
+*.dump
+*.bak
