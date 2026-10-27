@@ -2,6 +2,13 @@ from logging.config import fileConfig
 from backend.app.base import Base
 from backend.app.database import engine
 from backend.app import models
+from backend.app.config import settings
+
+if settings.database_url:
+    config.set_main_option(
+        "sqlalchemy.url",
+        settings.database_url.replace("%", "%%"),
+    )
 
 target_metadata = Base.metadata
 
