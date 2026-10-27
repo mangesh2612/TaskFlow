@@ -28,8 +28,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r backend/requirements.txt
 
+      
       - name: Run API tests
+        env:
+          DB_USERNAME: test_user
+          DB_PASSWORD: test_password
+          DB_HOST: 127.0.0.1
+          DB_PORT: "5433"
+          DB_NAME: taskflow_test
         run: python -m pytest backend/tests -v
+
 
   frontend-checks:
     name: Frontend lint and build
